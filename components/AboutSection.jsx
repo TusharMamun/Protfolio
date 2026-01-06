@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-const About = () => {
+const AboutSection = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -81,12 +81,30 @@ const About = () => {
             <div className="glass-card p-8 rounded-2xl">
               {/* Profile Image */}
               <div className="w-48 h-48 rounded-full mx-auto mb-8 overflow-hidden border-4 border-gray-700 relative">
-                <Image
-                  src="/images/profile.svg"
+                <img
+                  src="/images/Profile.png"
                   alt="Tushar Mamun"
-                  width={192}
-                  height={192}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    console.log('About: Primary image failed, trying lowercase...');
+                    if (e.target.src.includes('Profile.png')) {
+                      e.target.src = "/images/profile.png";
+                    } else if (e.target.src.includes('profile.png')) {
+                      e.target.src = "/images/profile.svg";
+                    } else {
+                      console.log('About: All image sources failed');
+                      // Show a colored div as fallback
+                      e.target.style.display = 'none';
+                      e.target.parentElement.style.background = 'linear-gradient(135deg, #6366f1, #8b5cf6)';
+                      const fallbackDiv = document.createElement('div');
+                      fallbackDiv.style.cssText = 'display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 24px; font-weight: bold;';
+                      fallbackDiv.textContent = 'TM';
+                      e.target.parentElement.appendChild(fallbackDiv);
+                    }
+                  }}
+                  onLoad={(e) => {
+                    console.log('About: Image loaded successfully from:', e.target.src);
+                  }}
                 />
                 {/* Status Badge */}
                 <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full gradient-bg flex items-center justify-center">
@@ -196,4 +214,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutSection

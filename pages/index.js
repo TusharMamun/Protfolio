@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import TechMarquee from '../components/TechMarquee'
-import About from '../components/About'
+import AboutSection from '../components/AboutSection'
 import Education from '../components/Education'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
@@ -45,7 +45,7 @@ export default function Home() {
         <main>
           <Hero />
           <TechMarquee />
-          <About />
+          <AboutSection />
           <Education />
           <Projects />
           <Skills />
