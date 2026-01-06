@@ -1,0 +1,8 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- React Icon -->
+  <circle cx="12" cy="12" r="2" fill="#61DAFB"/>
+  <path d="M12 1C15.5 1 18.5 3.5 20 7C18.5 10.5 15.5 13 12 13C8.5 13 5.5 10.5 4 7C5.5 3.5 8.5 1 12 1Z" stroke="#61DAFB" stroke-width="1" fill="none"/>
+  <path d="M12 23C8.5 23 5.5 20.5 4 17C5.5 13.5 8.5 11 12 11C15.5 11 18.5 13.5 20 17C18.5 20.5 15.5 23 12 23Z" stroke="#61DAFB" stroke-width="1" fill="none"/>
+  <path d="M1 12C1 8.5 3.5 5.5 7 4C10.5 5.5 13 8.5 13 12C13 15.5 10.5 18.5 7 20C3.5 18.5 1 15.5 1 12Z" stroke="#61DAFB" stroke-width="1" fill="none"/>
+  <path d="M23 12C23 15.5 20.5 18.5 17 20C13.5 18.5 11 15.5 11 12C11 8.5 13.5 5.5 17 4C20.5 5.5 23 8.5 23 12Z" stroke="#61DAFB" stroke-width="1" fill="none"/>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "name": "Tushar Mamun - Full-Stack Developer",
+  "short_name": "Tushar Mamun",
+  "description": "Full-Stack Developer specializing in MERN Stack, Next.js, React, and modern web technologies",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en",
+  "dir": "ltr"
+}

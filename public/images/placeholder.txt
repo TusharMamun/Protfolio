@@ -1,0 +1,31 @@
+# Image Assets
+
+This folder contains image assets for the portfolio:
+
+## Profile Image
+- **profile.svg** - Current placeholder profile image
+- **To add your real photo**: Replace `profile.svg` with `profile.jpg` or `profile.png`
+- **Recommended size**: 400x400px minimum, square aspect ratio
+- **Format**: JPG, PNG, or WebP for best performance
+
+## Required Images:
+- **og-image.jpg** (1200x630) - Open Graph image for social sharing
+- **twitter-image.jpg** (1200x600) - Twitter card image
+- **project-screenshots/** - Screenshots of your projects
+
+## How to Replace Profile Image:
+1. Add your photo as `profile.jpg` or `profile.png` in this folder
+2. Update the image path in components:
+   - `components/Hero.jsx` - Line with `src="/images/profile.svg"`
+   - `components/About.jsx` - Line with `src="/images/profile.svg"`
+3. Change `.svg` to `.jpg` or `.png` in both files
+
+## Image Optimization:
+- Use WebP format when possible for better performance
+- Optimize images before adding to reduce bundle size
+- Next.js will automatically optimize images when using the Image component
+
+## Recommended Tools:
+- TinyPNG for compression
+- Squoosh for format conversion
+- Figma/Canva for creating social media images

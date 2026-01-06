@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-[10px] border border-white/10 rounded-2xl;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-indigo-500 to-purple-500;
+  }
+  
+  .tech-icon {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-[0_10px_20px_rgba(99,102,241,0.3)];
+  }
+  
+  .bento-item {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)];
+  }
+  
+  .skill-bar {
+    @apply h-1.5 rounded-full bg-white/10 overflow-hidden;
+  }
+  
+  .skill-progress {
+    @apply h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500;
+  }
+  
+  .nav-link {
+    @apply relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-indigo-500 after:-bottom-1 after:left-0 after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .project-img {
+    @apply h-70 bg-cover bg-center relative transition-all duration-500 hover:scale-105;
+  }
+  
+  .fade-in {
+    @apply opacity-0 translate-y-5 transition-all duration-500;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .testimonial-card {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .testimonial-card:hover {
+    @apply -translate-y-2 shadow-[0_20px_40px_rgba(99,102,241,0.2)];
+  }
+  
+  .testimonial-card::before {
+    content: '"';
+    @apply absolute -top-5 right-5 text-[120px] text-indigo-500/10 font-serif;
+  }
+  
+  .quote-icon {
+    @apply text-indigo-500 drop-shadow-[0_0_8px_rgba(99,102,241,0.3)];
+  }
+  
+  .star-rating {
+    @apply text-yellow-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.3)];
+  }
+  
+  .client-image {
+    @apply w-16 h-16 border-2 border-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.3)];
+  }
+  
+  .testimonial-slider {
+    @apply scroll-smooth scrollbar-none;
+  }
+  
+  .testimonial-slider::-webkit-scrollbar {
+    @apply hidden;
+  }
+  
+  .project-tech-badge {
+    @apply bg-white/10 backdrop-blur-[10px] border border-white/20;
+  }
+  
+  .timeline {
+    @apply relative pl-8;
+  }
+  
+  .timeline::before {
+    content: '';
+    @apply absolute left-2.5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 to-purple-500;
+  }
+  
+  .timeline-item {
+    @apply relative mb-8;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute -left-8 top-2 w-4 h-4 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 border-2 border-black shadow-[0_0_0_3px_rgba(99,102,241,0.3)];
+  }
+  
+  .cert-badge {
+    @apply relative overflow-hidden;
+  }
+  
+  .cert-badge::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500;
+  }
+  
+  .education-card {
+    @apply transition-all duration-300 hover:translate-x-2 hover:shadow-[0_20px_40px_rgba(99,102,241,0.2)];
+  }
+}
