@@ -86,24 +86,8 @@ const AboutSection = () => {
                   alt="Tushar Mamun"
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    console.log('About: Primary image failed, trying lowercase...');
-                    if (e.target.src.includes('Profile.png')) {
-                      e.target.src = "/images/profile.png";
-                    } else if (e.target.src.includes('profile.png')) {
-                      e.target.src = "/images/profile.svg";
-                    } else {
-                      console.log('About: All image sources failed');
-                      // Show a colored div as fallback
-                      e.target.style.display = 'none';
-                      e.target.parentElement.style.background = 'linear-gradient(135deg, #6366f1, #8b5cf6)';
-                      const fallbackDiv = document.createElement('div');
-                      fallbackDiv.style.cssText = 'display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 24px; font-weight: bold;';
-                      fallbackDiv.textContent = 'TM';
-                      e.target.parentElement.appendChild(fallbackDiv);
-                    }
-                  }}
-                  onLoad={(e) => {
-                    console.log('About: Image loaded successfully from:', e.target.src);
+                    console.log('About: Profile.png failed to load, trying fallback...');
+                    e.target.src = "/images/profile.svg";
                   }}
                 />
                 {/* Status Badge */}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="profileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shadowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#581c87;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#profileGrad)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="30" fill="white" opacity="0.1"/>
+  <circle cx="320" cy="80" r="20" fill="white" opacity="0.1"/>
+  <circle cx="350" cy="300" r="25" fill="white" opacity="0.1"/>
+  <circle cx="80" cy="320" r="15" fill="white" opacity="0.1"/>
+  
+  <!-- Person silhouette with shadow -->
+  <g transform="translate(0, 10)">
+    <!-- Shadow -->
+    <circle cx="202" cy="162" r="58" fill="url(#shadowGrad)"/>
+    <path d="M202 242 C162 242 122 262 122 302 L122 402 L282 402 L282 302 C282 262 242 242 202 242 Z" fill="url(#shadowGrad)"/>
+    
+    <!-- Main figure -->
+    <circle cx="200" cy="160" r="58" fill="white" opacity="0.95"/>
+    <path d="M200 240 C160 240 120 260 120 300 L120 400 L280 400 L280 300 C280 260 240 240 200 240 Z" fill="white" opacity="0.95"/>
+  </g>
+  
+  <!-- Code symbols decoration -->
+  <text x="60" y="60" fill="white" opacity="0.3" font-size="24" font-family="monospace">&lt;/&gt;</text>
+  <text x="320" y="350" fill="white" opacity="0.3" font-size="20" font-family="monospace">{}</text>
+  <text x="40" y="250" fill="white" opacity="0.3" font-size="18" font-family="monospace">( )</text>
+  
+  <!-- Name and title -->
+  <text x="200" y="360" text-anchor="middle" fill="white" font-size="22" font-family="Arial, sans-serif" font-weight="bold">Tushar Mamun</text>
+  <text x="200" y="385" text-anchor="middle" fill="white" font-size="14" font-family="Arial, sans-serif" opacity="0.9">Full-Stack Developer</text>
+</svg>
